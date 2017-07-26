@@ -41,7 +41,13 @@ int main() {
 	
   N = 10;
   cout << N << endl;
-  int N = 100;
+  //int N = 100;
+  int N = N;
+  
+  /* !!!!!!!!! 
+  宣言された識別子は名前を書き終えた直後から有効で、
+  上記の初期化子NはglobalのNではなくint N のNであるから初期価値は不定.*/
+
   cout << N << endl;
   FOR(i, 0, 2) {
 	  int N = 12;
@@ -52,6 +58,7 @@ int main() {
 		  cout << ::N << endl; // global をみる
 	  }
   }
+
   cout << ans << endl;
 
   return 0;
