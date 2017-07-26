@@ -38,6 +38,11 @@ int &refF() {
 	return x;
 }
 
+const int Size = 10;
+int &r(int i) {
+	static int a[Size];
+	return a[i];
+}
 
 int main() {
   cin.tie(0);
@@ -50,6 +55,13 @@ int main() {
   // 書き換えもできる
   refF() = 2*N; // 左辺式になりうる
   cout << refF() << endl;
+ 
+  for (int i = 0; i < N; i++) {
+	  r(i) = i;
+  }
+  for (int i = 0; i < N; i++) {
+	  cout << "r(" << i << "): " << r(i) << endl;
+  }
 
   return 0;
 }
