@@ -60,9 +60,9 @@ int main() {
 
   aaa::pri_A();
   alta::pri_A();
-  using namespace sss;
+  //using namespace sss; // using 指令は避けるべき。
   using sss::print_hell;// sss名前空間の利用を宣言
- // using sss::print_hell; // using 指令は避けるべき。
+ // using sss::print_hell;
   // using namespace stdはこういうこと
 
   print_hell();
