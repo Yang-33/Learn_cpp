@@ -81,7 +81,7 @@ Date Date::preceding_day() const {
 }
 Date Date::preceding_day2() const {
 	int dmax[] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
-	
+
 	int y = this->y; // データメンバと同じ変数名で宣言した際には宣言した方の変数の名前が見えることになっている
 	int m = this->m;
 	int dd = this->d;
@@ -95,7 +95,7 @@ Date Date::preceding_day2() const {
 		}
 		dd = dmax[m - 1];
 	}
-	return Date(y,m,dd);
+	return Date(y, m, dd);
 	// コンストラクタを明示的に呼び出すことによって一時オブジェクトを作成して返却値とするとよい
 }
 
